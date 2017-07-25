@@ -15,8 +15,6 @@ function generateSeats(row) {
 	for(let i=0; i<row; i++) {
 		seats.push([])
 	}
-	console.log(seats +'******************');
-
 	return seats
 }
 
@@ -36,7 +34,7 @@ function managePerson(arr, rowSeats) {
 
 function printSeats(seats) {
 	for(let i=0; i<seats.length; i++) {
-		console.log(`Baris ${i} : `, seats[i])
+		console.log(`Baris ${i+1} : `, seats[i])
 	}
 }
 
