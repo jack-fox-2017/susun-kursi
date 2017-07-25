@@ -14,7 +14,7 @@ function managePerson(arr, rowSeats) {
 	var seats = generateSeats(rowSeats)
 	let row = 0
 	for(let i=0; i<arr.length; i++) {
-		console.log(row);
+		// console.log(row);
 		seats[row].push(arr[i]);
 		// console.log(temp);
 		// console.log(seats);
@@ -24,7 +24,7 @@ function managePerson(arr, rowSeats) {
 			row = 0;
 	 }
 	}
-	console.log(seats);
+	// console.log(seats);
 	printSeats(seats)
 }
 
@@ -42,4 +42,4 @@ function printSeats(seats) {
 	}
 }
 
-managePerson(['a','b','c','d','e','f','g','h','i','j'], 4)
+managePerson(['a','b','c','d','e','f','g','h','i','j'], 3)
