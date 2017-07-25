@@ -12,29 +12,29 @@
 
 function generateSeats(row) {
 	let seats = []
-	for(let i=0; i<rowa; i++) {
-		seat.push([])
+	for(let i=0; i<row; i++) { // 'rowa' di ubah menjadi row
+		seats.push([]) // 'seats' ini kurang huruf s diakhir
 	}
 	return seats
 }
 
 function managePerson(arr, rowSeats) {
-	let seats = generateSeat(rowSeats)
-	let row = 0
+	let seats = generateSeats(rowSeats) // mengubah generateSeat menjadi generateSeats
+	let row = 0;
 
-	for(let i=0; i<arr.length-1; i++) {
-		seat[row].push(arr[i])
-		if(row <= 2) {
+	for(let i=0; i<arr.length; i++) { // arr.length-1 akan menjadikan array sampai ke huruf i maka di ubah menjadi arr.length agar sampai j
+		seats[row].push(arr[i])
+		if(row < rowSeats -1 ) {
 			row++
 		} else {
-			row == 0
+			row = 0; // mengubah '==' menjadi '='
 		}
 	}
 	printSeats(seats)
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
+	for(let i=0; i<seats.length; i++) { //mengubah let i=1 menjadi let i=0;
 		console.log(`Baris ${i} : `, seats[i])
 	}
 }
