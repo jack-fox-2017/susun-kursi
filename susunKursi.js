@@ -1,7 +1,7 @@
 // bila ada 10 orang, ['a','b','c','d','e','f','g','h','i','j'].
 // orang-orang tsb akan diatur tempat duduk nya berdasarkan urutannya secara vertikal,
 // dan jumlah maksimal kursi per baris vertikal adalah 3.
-// tampilkan siapa saja yg berada di baris 1, 2, dan 3 nya.
+// tampilkan siapa saja yg be	rada di baris 1, 2, dan 3 nya.
 
 // hasil yg benar :
 // Baris 0 :  [ 'a', 'd', 'g', 'j' ]
@@ -11,30 +11,31 @@
 'use strict'
 
 function generateSeats(row) {
-	let seats = []
-	for(let i=0; i<rowa; i++) {
+	let seat = []
+	for(let i=0; i<row; i++) {
 		seat.push([])
 	}
-	return seats
+	return seat;
+	// console.log(seat); outputnya  [ [], [], [] ]
 }
 
 function managePerson(arr, rowSeats) {
-	let seats = generateSeat(rowSeats)
+	let seats = generateSeats(rowSeats)
 	let row = 0
 
-	for(let i=0; i<arr.length-1; i++) {
-		seat[row].push(arr[i])
-		if(row <= 2) {
+	for(let i=0; i<arr.length; i++) {
+		seats[row].push(arr[i])
+		if(row < rowSeats-1) {
 			row++
 		} else {
-			row == 0
+			row = 0
 		}
 	}
 	printSeats(seats)
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
+	for(let i=0; i<seats.length; i++) {
 		console.log(`Baris ${i} : `, seats[i])
 	}
 }
